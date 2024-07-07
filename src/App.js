@@ -126,8 +126,8 @@ function App() {
       <Navbar title = "Text Util" mode={mode} toggleMode={toggleMode} toggleRedBtn={toggleRedBtn}/>
       <Alert alert={alert}/>
       <div className="container my-3">{/*  container is a bootstrap class */}
-          {/* <TextForm heading="Enter the text to analyse below" mode={mode} showAlert={showAlert}/> */}
-      <About/>
+          <TextForm heading="Enter the text to analyse below" mode={mode} showAlert={showAlert}/>
+      {/* <About/> */}
       </div>
     </>
   );
