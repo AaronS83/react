@@ -47,7 +47,7 @@ export default function About() {
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse show"  data-bs-parent="#accordionExample">
                     <div className="accordion-body" >
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <strong> Hello, This is my first React App</strong>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@ export default function About() {
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <strong>Its just a simple Text Util App made with the help of Youtube Guide</strong> 
                     </div>
                 </div>
             </div>
@@ -71,7 +71,10 @@ export default function About() {
                 </h2>
                 <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <strong>Credits to Code With Harry</strong> <br/>
+                    This app was made by his youtube series linked here<br/>
+                    <a href='https://www.youtube.com/playlist?list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt'>Link</a><br/>
+                    It was a good video series
                     </div>
                 </div>
             </div>
