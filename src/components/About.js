@@ -52,7 +52,7 @@ export default function About() {
                 </div>
             </div>
             <div className="accordion-item" style={myStyle}>
-                <h2 className="accordion-header">
+                <h2 className="accordion-header">   
                     <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Accordion Item #2
                     </button>
