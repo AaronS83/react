@@ -52,7 +52,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import About from './components/About';
+// import About from './components/About';
 
 function App() {
   const [mode, setMode] = useState('light') // whether darkmode is dark or not
