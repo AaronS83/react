@@ -75,14 +75,6 @@
   
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-  Routes,
-  Router
-} from "react-router-dom";
 
 export default function Navbar(props) {
 
@@ -104,10 +96,12 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className={`nav-link active text-${textColor(props.mode)}`} aria-current="page" to="/">Home</Link>
+          {/* <Link className={`nav-link active text-${textColor(props.mode)}`} aria-current="page" to="/">Home</Link> */}
+          <a className={`nav-link active text-${textColor(props.mode)}`} aria-current="page" href="#">Home</a>
         </li>
         <li className="nav-item">
-          <Link className={`nav-link text-${textColor(props.mode)}`} to="./about">About</Link>
+          {/* <Link className={`nav-link text-${textColor(props.mode)}`} to="./about">About</Link> */}
+          <a className={`nav-link text-${textColor(props.mode)}`} href="#">About</a>
         </li> 
       </ul>
       {/* <form className="d-flex" role="search">
