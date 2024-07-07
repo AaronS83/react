@@ -59,7 +59,7 @@ export default function About() {
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                    <strong>Its just a simple Text Util App made with the help of Youtube Guide</strong> 
+                    <strong>Its just a simple Text Util App made with the help of Youtube Guide </strong> 
                     </div>
                 </div>
             </div>
