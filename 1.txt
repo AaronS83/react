@@ -1,0 +1,24 @@
+https://www.youtube.com/watch?v=0riHps91AzE
+28:00
+
+Component is a piece of reusable code.
+It is individual piece of code that has its own i/p, o/p and functionality.
+
+Cannot write html in javascript without improting the react library.
+
+To return multiple component, use- return(
+						....
+						)
+
+
+If you want to pass an array or any thing from the parent to the child in the form of property, it can be done like
+      <ContactList contact={contact}/>
+Here we are passing the contact array as a property to the contact list as a property
+
+The property can be accessed via the keyword props
+const ContactList = (props) =>{
+	...
+}
+
+___________________________________________
+contact card, ie display of all the 

@@ -1,0 +1,178 @@
+Whenever there is a public folder for the web and there are many files inside, then the entry point for the webpage would be the index.html page
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+This is telling that we want to put app.js inside the id root
+__________________
+There are 2 types of conponenets
+function and class based components
+
+class baseed used to be used before, but now function based is used more
+
+function app(){
+    return(
+        ....... //This is the jsx that will be written inside the app
+    );
+}
+
+// jsx is html with a little js
+we can write html with js inside {}
+
+** jsx is similar to html and the only thing that differs is the use of js inside
+    we can use most of the html keywords except for a few, like class => className, for => htmlFor etc.
+
+** when we return with jsx, it should return only one element, we cannnot have this return funciton return more than one element, therefore
+    we have to keep only one div and return that div with all the changes done to that div
+    we can use jsx fragment if we want more that one element inside the retrurn and we want to return it (<> .... </>)
+
+______________________________________________________
+
+single page application, html, css and js is loaded from the server at one time and then the js will control every thing that happens on the page after that, all the button presses, or clicks.
+We neednot reload the page.
+
+In muti page application, for each page the client needs to place a request and the response is generated for each request. the server needs to respond for each page.
+There is a need to reload the page
+______________________________________________________
+The node modules file has all the dependencies in it required to develop the react app
+It can be re-created using npm install,with the help of package lock.json
+
+bootstrap helps build the entire project without needing to build stuff, it is the ui conponenets
+Need to add the js bootstrap src code above the body
+Need to add the css bootstrap src code above the title
+It has to be in the same location the starter template
+
+______________________________________________________
+There is an issue with using the bootstrap website, that is because the bootstrap app uses html and css, it is not geared for react, 
+since it is not geared for reaact, we have to close all the tags that do not close,
+like <hr> we will have to close it using <hr/>
+we will also have to deal with the class=, and change it to className= using ctrl+F
+We will also convert the href="#" into href="/" using ctrl F
+
+______________________________________________________
+The public folder has the conponenets that are publically availible to the user, therefore do not keep files inside that that are 
+secret, like passwords, etc they will be publically accessable
+
+npm start is only used for development purpose, 
+npm run build is used for the user to use, npm run build has better optimization for the load
+______________________________________________________
+
+If we create a seperate components
+
+use the es7 react/redux/graphql
+No need to import react because we are using function based components
+
+imagine if we have made 2 modules and in the second one we have 4 const var(a,b,c,d)
+if wewrite export default c
+
+and in the first module we write import ui from "./module2"
+console.log(ui)
+
+if we run it using node module1, we will get an error
+
+but if we change the extension of the file to mjs, it will run and it will display the value of the constant var
+this is default export and even if we change the name of the variable ui in the first module the value of the const var that was
+exported will still show
+
+if we write 
+export {a}
+export {b}
+etc in the second module
+
+in the first module we must write export ui, {a,b} also and do console.log(a) and b to acess it
+the var name in this module must match the exported var name
+______________________________________________________
+
+imagine we want to change some of the aprt in the navbar, eg the name, we can pass it
+<Navbar title="Text Utils"/> This is a props
+We are passing a props to the navbar component 
+
+In the navbar component we add props into the funciton as an argument
+we can access that value by using {props.title} at the required position
+
+We can now change the title of the navbar whenever we want by changing the  title
+
+* We can change the values inside a component by passing props to it from the calling function
+* Change the property of the component from outside and they are the required info without which the component is empty
+* If we hard code the value, it will not be reusable
+* props are read-only and need not be changed
+
+impt for proptypes
+Navbar.propTypes = {title: PropTypes.string} // We are telling that title is a string
+// if the prop sent by app is wrong eg it is a number, then an error will show, saying wrong prop 
+// used if the dev sends wrong type for prop and it will get caught
+
+Navbar.defaultProps = {
+  title: "title jere"
+}
+this will show if the title is not passed as a prop when called
+
+Navbar.propTypes = {title: PropTypes.string.isRequired}
+if the title is not passed when it is called <Navbar /> lik  this, then error is shown
+
+basically props are property that can be sent by the caller to the calle component
+
+*** rfc is to make a react component
+______________________________________________________
+
+Each component has a state
+a state is its condition at that moment
+It belongs to the component
+eg- The text box is empty is one state
+    If there is some text inside the text box, then it is another state
+
+We put or assign the content inside the text box into a variable 
+if the variable gets updated, then wherever the variable is used the changes should reflect there
+make the text inside the textbox as a part of state
+
+****
+import React, {useState} from 'react'
+// We import useState from react
+
+const [text, setText] = useState("Enter text here");
+// inside the var text, we want to have or set the default value to that variable as "Enter text here"
+// Whenever the text variable is edited, it is edited through the setText function
+// useState returns text, and setText
+
+//Advantage is that wherever we use text, and wherever we use it if we update it, it will update everywhere it is used without reloading the page
+// Hooks allows us to use the class features without creating classes
+// cannot edit the text variable normally like
+    text = "alkd"
+    we can only edit it via the function
+    setText("alkd")
+****
+
+When listening for an event in react, the function will execute always, it will generate an event object
+
+        <textarea className="form-control" onChange={handleOnChange} id="myBox" rows="10" value={text}></textarea>
+    const handleOnChange = (event)=>{
+        console.log("Handle on change was done")
+        setText(event.target.value)
+    }
+
+    This is used often when we use input, textareas, etc
+there is a value inside the textarea component and that value is text which is a state variable
+we can edit the text using setText area
+* When user tries to change the value, that value of that value should change to the value entered by the user
+  with the help of this we can type in the text area
+
+  ______________________________________________________
+  go to bootstrap and see what all buttons are possible
+
+  ______________________________________________________
+  manage the state of the application(react app) using the app.js
+  give the control to app.js
+
+  2 curly braces for style in textForm- one for the javascript, to write any javascript inside react, we need to add {}
+                  the other is for the object, since we are writing an object which is written insidde {}
+
+______________________________________________________
+using reactDOM we can choose to change parts of the website
+if we use <a href> then the page reloads
+if we use <Link to> then the page does not reload, this is better
+
+better use exact path='' // then react uses actual path, insead of partial map
